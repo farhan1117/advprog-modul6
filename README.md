@@ -21,3 +21,7 @@ Berdasarkan dari dokumentasi Rust, menggunakan `format!` untuk menambahkan file 
 ![Commit 3 screen capture](/assets/images/commit3.png)
 
 Mengikuti dokumentasi Rust pada bagian ketiga ini, awalnya digunakan `if else` untuk melakukan `handle_connection` dimana adanya HTTP request yang tidak ditemukan. Jika HTTP request yang diminta ada, pada contoh ini terdapat pada request line dari GET menuju path `/`, sehingga menampilkan HTML `hello.html`. Pada kondisi selain dari HTTP request tersebut, akan ditampilkannya halaman HTML `404.html` karena HTTP request `NOT FOUND`. Selanjutnya melakukan refactoring terhadap `main.rs` karena `if else` statement yang terlihat banyak repetisi.
+
+**“(4) Simulation of slow request. “**
+
+Berdasarkan dokumentasi Rust, pertama dimodifikasi code `main.rs` dimana awalnya menggunakan `if` menjadi `match` untuk melakukan tiga case. `match` tidak dapat reference dan dereference layaknya equality method, maka perlu secara explisit menyebutkan potongan `request_line`. Pada kasus ini, match pertama sama seperti awal, yang kedua me-request ke `/sleep` dan ketika adanya request ke `/sleep`, server akan sleep selama 10 detik sebelum me render halaman HTML dengan benar. Terakhir, sama seperti `else` yang sebelumnya, menampilkan jika HTTP request tidak ditemukan.
