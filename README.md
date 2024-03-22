@@ -19,3 +19,5 @@ Berdasarkan dari dokumentasi Rust, menggunakan `format!` untuk menambahkan file 
 
 **“(3) Validating request and selectively responding”**
 ![Commit 3 screen capture](/assets/images/commit3.png)
+
+Mengikuti dokumentasi Rust pada bagian ketiga ini, awalnya digunakan `if else` untuk melakukan `handle_connection` dimana adanya HTTP request yang tidak ditemukan. Jika HTTP request yang diminta ada, pada contoh ini terdapat pada request line dari GET menuju path `/`, sehingga menampilkan HTML `hello.html`. Pada kondisi selain dari HTTP request tersebut, akan ditampilkannya halaman HTML `404.html` karena HTTP request `NOT FOUND`. Selanjutnya melakukan refactoring terhadap `main.rs` karena `if else` statement yang terlihat banyak repetisi.
