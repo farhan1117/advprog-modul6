@@ -16,3 +16,6 @@ Lalu pada handle_connection, dibuatlah suatu instance BufReader yang mengambil m
 ![Commit 2 screen capture](/assets/images/commit2.png)
 
 Berdasarkan dari dokumentasi Rust, menggunakan `format!` untuk menambahkan file konten sebagai body dari HTTP response yang valid. lalu menambahkan `Content-Length` header yang mengatur sesuai response body, dimana dari `hello.html`.
+
+**“(3) Validating request and selectively responding”**
+![Commit 3 screen capture](/assets/images/commit3.png)
